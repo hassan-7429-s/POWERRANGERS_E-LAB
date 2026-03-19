@@ -176,10 +176,10 @@ export default function Home() {
               <div>
                 <h4 className="text-xl font-semibold mb-4 text-gray-800">Du Hope E-Commerce Experience</h4>
                 <p className="text-gray-700 mb-6">
-                  We are building an e-commerce platform for Du Hope that enables women transitioning out of sex work to sell handmade products locally and internationally. The prototype blends a responsive online store with hospitality and vocational training so members can serve global customers with confidence while earning certifications from the program.
+                  We are building an e-commerce platform for Du Hope to help women transitioning out of sex work sell handmade products locally and internationally, while also offering hospitality training and certifications. The prototype blends a responsive online store with vocational learning modules so members can serve global customers with confidence and track the credentials they earn from the program.
                 </p>
                 <p className="text-gray-700 mb-6">
-                  By combining intuitive digital tools, secure payments, and storytelling that highlights the artisans’ journeys, the site helps them scale their businesses while capturing progress toward new career opportunities in hospitality and related fields.
+                  By combining intuitive digital tools, secure payments, and storytelling that highlights each artisan’s journey, the platform empowers them to achieve economic independence and unlock long-term career opportunities beyond the creative economy.
                 </p>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Local & international storefront showcasing handmade fashion, crafts, and hospitality services</li>
