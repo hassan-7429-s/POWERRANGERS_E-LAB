@@ -1,47 +1,46 @@
 export default function Home() {
   const galleryAssets = [
     {
-      type: "image",
+      
       src: "/Hassan image.JPG",
       title: "Hassan Ahmed",
-      caption: "Platform architect driving the Du Hope storefront build"
     },
     {
-      type: "image",
+     
       src: "/honorata image.jpeg",
       title: "Honorate Umwamikazi",
-      caption: "Video storyteller documenting skills training"
+      
     },
     {
-      type: "image",
+      
       src: "/carla image.jpeg",
       title: "Inyange Carla",
-      caption: "Team support championing community resources"
+      
     },
     {
-      type: "image",
+     
       src: "/Bruno image.jpeg",
       title: "Hirwa Bruno",
-      caption: "Business coach aligning hospitality modules"
+      
     },
     {
-      type: "image",
+      
       src: "/hania image.jpeg",
       title: "Hanai Gahitsi",
-      caption: "Team speaker and ambassador for Du Hope partners"
+      
     },
     {
-      type: "image",
+      
       src: "/Germain image.jpeg",
       title: "Germain Iradukunda",
-      caption: "Operations lead ensuring long-term impact"
+      
     },
     {
-      type: "video",
+      
       src: "https://videos.pexels.com/video-files/854192/854192-sd_640_360_25fps.mp4",
       poster: "/group picture.jpeg",
-      title: "Hospitality training spotlight",
-      caption: "Video placeholder for the skills and certifications modules"
+      title: "Snapshots of our E-Lab journey",
+      
     }
   ];
 
