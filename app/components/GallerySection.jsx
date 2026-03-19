@@ -85,16 +85,6 @@ const FALLBACK_ITEMS = [
     order: 9,
   },
   {
-    id: "fallback-video-mission",
-    type: "video",
-    src: "/personal%20mission%20video.mp4",
-    poster: "/group%20picture.jpeg",
-    caption: "Mission spotlight",
-    alt: "Personal mission storytelling video",
-    tag: "Story",
-    order: 10,
-  },
-  {
     id: "fallback-video-cinematic",
     type: "video",
     src: "/rwanda_women_empowerment_cinematic_video.mp4",
@@ -106,7 +96,7 @@ const FALLBACK_ITEMS = [
   },
 ];
 
-const TAG_LABELS = ["All", "Team", "Project", "Story", "Impact", "Community"];
+const TAG_LABELS = ["All", "Team", "Project", "Impact", "Community"];
 
 function GalleryCard({ item }) {
   return (
