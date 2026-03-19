@@ -2,37 +2,33 @@ export default function Home() {
   const galleryAssets = [
     {
       type: "image",
-      src: "/Hassan image.JPG",
-      title: "Hassan Ahmed",
+      src: "/gallery1.jpeg",
+      title: "gallery1",
     },
     {
      type: "image",
-      src: "/honorata image.jpeg",
-      title: "Honorate Umwamikazi",
+      src: "/gallery2.jpeg",
+      title: "gallery2",
       
     },
     {
       type: "image",
-      src: "/carla image.jpeg",
-      title: "Inyange Carla",
+      src: "/gallery3.jpeg",
+      title: "gallery3",
       
     },
     {
      type: "image",
-      src: "/Bruno image.jpeg",
-      title: "Hirwa Bruno",
+      src: "/gallery4.jpeg",
+      title: "gallery4",
       
     },
     {
       type: "image",
-      src: "/hania image.jpeg",
-      title: "Hanai Gahitsi",
+      src: "/gallery5.jpeg",
+      title: "gallery5",
       
     },
-    {
-      type: "image",
-      src: "/Germain image.jpeg",
-      title: "Germain Iradukunda",
       
     },
     {
@@ -47,7 +43,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="w-full bg-white shadow-md z-50 border-b border-gray-100 fixed top-0">
+      <nav className="w-full bg-white/90 backdrop-blur-md shadow-md z-50 border-b border-gray-100 fixed top-0 transition-all duration-300">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img src="/logo.svg" alt="PowerRanger Logo" className="h-12 w-12 object-contain drop-shadow-lg" />
@@ -257,7 +253,7 @@ export default function Home() {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Challenge 1 */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-md">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-4">💻</div>
               <h3 className="text-xl font-bold mb-4 text-blue-800">Challenge 1: Digital Skills Gap</h3>
               <p className="text-gray-700 mb-4">
@@ -268,7 +264,7 @@ export default function Home() {
               </div>
             </div>
             {/* Challenge 2 */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-md">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold mb-4 text-green-800">Challenge 2: Secure Payment Systems</h3>
               <p className="text-gray-700 mb-4">
@@ -279,7 +275,7 @@ export default function Home() {
               </div>
             </div>
             {/* Challenge 3 */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl shadow-md">
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-4">🚚</div>
               <h3 className="text-xl font-bold mb-4 text-purple-800">Challenge 3: Logistics & Delivery</h3>
                 <p className="text-gray-700 mb-4">
@@ -290,7 +286,7 @@ export default function Home() {
               </div>
             </div>
             {/* Challenge 4 */}
-            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl shadow-md">
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-4">📱</div>
               <h3 className="text-xl font-bold mb-4 text-yellow-800">Challenge 4: Mobile Accessibility</h3>
               <p className="text-gray-700 mb-4">
@@ -301,7 +297,7 @@ export default function Home() {
               </div>
             </div>
             {/* Challenge 5 */}
-            <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl shadow-md">
+            <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-bold mb-4 text-pink-800">Challenge 5: Global Market Access</h3>
               <p className="text-gray-700 mb-4">
@@ -312,7 +308,7 @@ export default function Home() {
               </div>
             </div>
             {/* Challenge 6 */}
-            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl shadow-md">
+            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-bold mb-4 text-indigo-800">Challenge 6: Sustainable Transition</h3>
               <p className="text-gray-700 mb-4">
@@ -332,8 +328,8 @@ export default function Home() {
           <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-900">Meet Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {/* Team Member 1 */}
-            <div className="flex flex-col items-center">
-              <img src="/Hassan image.JPG" alt="Hassan Ahmed" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100" />
+            <div className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <img src="/Hassan image.JPG" alt="Hassan Ahmed" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100 group-hover:scale-105 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-gray-900 mb-1">Hassan Ahmed</h3>
               <p className="text-base text-gray-700 mb-1">Software Engineer</p>
               <details className="text-center">
@@ -342,8 +338,8 @@ export default function Home() {
               </details>
             </div>
             {/* Team Member 2 */}
-            <div className="flex flex-col items-center">
-              <img src="/honorata image.jpeg" alt="Inyange Carla" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100" />
+            <div className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <img src="/honorata image.jpeg" alt="Inyange Carla" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100 group-hover:scale-105 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-gray-900 mb-1">Honorate Umwamikazi</h3>
               <p className="text-base text-gray-700 mb-1">Video Editor</p>
               <details className="text-center">
@@ -352,8 +348,8 @@ export default function Home() {
               </details>
             </div>
             {/* Team Member 3 */}
-            <div className="flex flex-col items-center">
-              <img src="/carla image.jpeg" alt="Inyange Carla" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100" />
+            <div className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <img src="/carla image.jpeg" alt="Inyange Carla" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100 group-hover:scale-105 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-gray-900 mb-1">Inyange Carla</h3>
               <p className="text-base text-gray-700 mb-1"> Team Support </p>
               <details className="text-center">
@@ -362,8 +358,8 @@ export default function Home() {
               </details>
             </div>
             {/* Team Member 4 */}
-            <div className="flex flex-col items-center">
-              <img src="/Bruno image.jpeg" alt="Hirwa Bruno" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100" />
+            <div className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <img src="/Bruno image.jpeg" alt="Hirwa Bruno" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100 group-hover:scale-105 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-gray-900 mb-1">Hirwa Bruno</h3>
               <p className="text-base text-gray-700 mb-1">Professional Viber</p>
               <details className="text-center">
@@ -372,8 +368,8 @@ export default function Home() {
               </details>
             </div>
             {/* Team Member 5 */}
-            <div className="flex flex-col items-center">
-              <img src="/hania image.jpeg" alt="Hanai Gahitsi" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100" />
+            <div className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <img src="/hania image.jpeg" alt="Hanai Gahitsi" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100 group-hover:scale-105 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-gray-900 mb-1">Hanai Gahitsi</h3>
               <p className="text-base text-gray-700 mb-1"> Team speaker </p>
               <details className="text-center">
@@ -382,8 +378,8 @@ export default function Home() {
               </details>
             </div>
             {/* Team Member 6 */}
-            <div className="flex flex-col items-center">
-              <img src="/Germain image.jpeg" alt="Germain Iradukunda" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100" />
+            <div className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+              <img src="/Germain image.jpeg" alt="Germain Iradukunda" className="w-40 h-48 object-cover rounded-lg shadow-md mb-4 border-4 border-gray-100 group-hover:scale-105 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-gray-900 mb-1">Germain Iradukunda</h3>
               <p className="text-base text-gray-700 mb-1">Operations & Strategies</p>
               <details className="text-center">
@@ -407,7 +403,7 @@ export default function Home() {
             <div className="flex-1 text-left">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Help Lab</h3>
               <span className="block w-12 h-1 bg-yellow-400 mb-4 rounded"></span>
-              <a href="https://www.youtube.com/watch?v=s0-DbVFszL0" target="_blank" rel="noopener noreferrer" className="btn-primary">Watch Video</a>
+              <a href="https://www.youtube.com/watch?v=s0-DbVFszL0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-red-600 hover:bg-red-700 transition-all duration-300 hover:shadow-lg">Watch Video</a>
             </div>
             <div className="flex-1">
               <img src="/Help Lab.jpeg" alt="Help Lab Project" className="w-full h-64 object-cover rounded-xl shadow-lg" />
@@ -418,7 +414,7 @@ export default function Home() {
             <div className="flex-1 text-left">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Hunt for Treasure</h3>
               <span className="block w-12 h-1 bg-pink-500 mb-4 rounded"></span>
-              <a href="https://www.youtube.com/watch?v=2WGIxHpqiiA&t=7s" target="_blank" rel="noopener noreferrer" className="btn-primary">Watch Video</a>
+              <a href="https://www.youtube.com/watch?v=2WGIxHpqiiA&t=7s" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-pink-600 hover:bg-pink-700 transition-all duration-300 hover:shadow-lg">Watch Video</a>
             </div>
             <div className="flex-1">
               <img src="/Du hope Interview.jpeg" alt="Du Hope Organization" className="w-full h-64 object-cover rounded-xl shadow-lg" />
@@ -432,7 +428,7 @@ export default function Home() {
               <p className="text-lg text-gray-700 mb-6">
                 Exploring the challenges and opportunities in Africa, with a focus on unemployment among vulnerable women in Rwanda, including sex workers and teen moms, and how creative skills training can create pathways to economic independence.
               </p>
-              <a href="https://www.youtube.com/watch?v=ktOYOz1IM6k" target="_blank" rel="noopener noreferrer" className="btn-primary">Watch Video</a>
+              <a href="https://www.youtube.com/watch?v=ktOYOz1IM6k" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-300 hover:shadow-lg">Watch Video</a>
             </div>
             <div className="flex-1">
               <img src="/group picture.jpeg" alt="Discover Africa Project" className="w-full h-98 object-cover rounded-xl shadow-lg" />
@@ -477,7 +473,6 @@ export default function Home() {
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900">{asset.title}</h3>
-                  <p className="text-sm text-gray-600">{asset.caption}</p>
                   <span className="mt-3 inline-flex rounded-full border border-yellow-300 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-yellow-600">
                     {asset.type === "video" ? "Video" : "Image"}
                   </span>
@@ -500,12 +495,12 @@ export default function Home() {
             Reach out to collaborate, share ideas, or join our mission to empower women in Rwanda. Follow us for updates and inspiring stories!
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
-            <a href="hassansharif2030@gmail.com" className="btn-primary">Email Us</a>
-            <a href="https://www.instagram.com/pow_rans/" target="_blank" rel="noopener noreferrer" className="btn-secondary flex items-center justify-center space-x-2">
+            <a href="mailto:hassansharif2030@gmail.com" className="inline-flex items-center justify-center px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">Email Us</a>
+            <a href="https://www.instagram.com/pow_rans/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-full transition-all duration-300 backdrop-blur-sm space-x-2">
               <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
               Instagram
             </a>
-            <a href="https://www.youtube.com/@power-rangersgogo" target="_blank" rel="noopener noreferrer" className="btn-secondary flex items-center justify-center space-x-2">
+            <a href="https://www.youtube.com/@power-rangersgogo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-full transition-all duration-300 backdrop-blur-sm space-x-2">
               <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.94C18.2 5.5 12 5.5 12 5.5s-6.2 0-7.86.56a2.75 2.75 0 0 0-1.94 1.94C2.5 9.66 2.5 12 2.5 12s0 2.34.56 3.999a2.75 2.75 0 0 0 1.94 1.94C5.8 18.5 12 18.5 12 18.5s6.2 0 7.86-.56a2.75 2.75 0 0 0 1.94-1.94C21.5 14.34 21.5 12 21.5 12s0-2.34-.56-3.999zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
               YouTube
             </a>
