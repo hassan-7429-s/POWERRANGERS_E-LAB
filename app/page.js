@@ -174,23 +174,25 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-center mb-8 text-indigo-600">Our Prototype</h3>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h4 className="text-xl font-semibold mb-4 text-gray-800">Du Hope E-Commerce Platform</h4>
+                <h4 className="text-xl font-semibold mb-4 text-gray-800">Du Hope E-Commerce Experience</h4>
                 <p className="text-gray-700 mb-6">
-                  Our prototype is a fully functional e-commerce website built on user-friendly platforms like Wix or WordPress, designed specifically for Du Hope’s handmade products. The platform serves as both a digital marketplace and a training tool for women learning digital entrepreneurship.
+                  We are building an e-commerce platform for Du Hope that enables women transitioning out of sex work to sell handmade products locally and internationally. The prototype blends a responsive online store with hospitality and vocational training so members can serve global customers with confidence while earning certifications from the program.
+                </p>
+                <p className="text-gray-700 mb-6">
+                  By combining intuitive digital tools, secure payments, and storytelling that highlights the artisans’ journeys, the site helps them scale their businesses while capturing progress toward new career opportunities in hospitality and related fields.
                 </p>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Intuitive product catalog with high-quality images and descriptions</li>
-                  <li>• Secure payment processing with mobile money integration</li>
-                  <li>• Mobile-responsive design optimized for smartphones</li>
-                  <li>• Order management system with real-time tracking</li>
-                  <li>• Integrated training modules for digital skills development</li>
-                  <li>• Social impact storytelling to connect with conscious consumers</li>
+                  <li>• Local & international storefront showcasing handmade fashion, crafts, and hospitality services</li>
+                  <li>• Training dashboards for hospitality skills, certifications, and onboarding guidance</li>
+                  <li>• Responsive checkout that stitches together mobile money, cards, and regional payment partners</li>
+                  <li>• Orders + delivery tracking for local logistics partners and global couriers</li>
+                  <li>• Story blocks highlighting certifications earned, hospitality milestones, and community impact</li>
                 </ul>
               </div>
               <div className="relative">
                 <img src="/group picture.jpeg" alt="Du Hope E-Commerce Platform Prototype" className="w-full h-64 object-cover rounded-lg shadow-md" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg flex items-end">
-                  <p className="text-white p-4 font-semibold">Digital Empowerment Through E-Commerce</p>
+                  <p className="text-white p-4 font-semibold">Building careers through commerce + hospitality</p>
                 </div>
               </div>
             </div>
@@ -390,6 +392,36 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+      <section id="gallery" className="section bg-gray-50">
+        <div className="container mx-auto max-w-6xl space-y-6">
+          <div className="space-y-3 text-center">
+            <h2 className="text-4xl font-extrabold text-gray-900">Gallery</h2>
+            <p className="max-w-3xl mx-auto text-lg text-gray-700">
+              Placeholder cards for the photos and videos that will highlight the PowerRanger E-Lab journey. Replace these tiles with real assets whenever you are ready.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <div
+                key={index}
+                className="flex flex-col gap-3 rounded-3xl border border-dashed border-gray-300 bg-white/60 p-6 text-center shadow-xl transition hover:-translate-y-1"
+              >
+                <div className="h-44 w-full rounded-2xl bg-gradient-to-br from-yellow-200 to-yellow-400/80 animate-pulse" />
+                <p className="text-xs font-semibold uppercase tracking-[0.5em] text-gray-500">Placeholder</p>
+                <p className="text-lg font-semibold text-gray-900">Media coming soon</p>
+                <p className="text-sm text-gray-500">Swap this card with an image or video tile.</p>
+              </div>
+            ))}
+          </div>
+            <div className="text-center text-sm text-gray-500">
+            Update this grid with actual &lt;img&gt;/&lt;video&gt; elements once the assets are available.
+          </div>
+        </div>
+      </section>
+
+
 
 
 
