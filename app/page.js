@@ -1,42 +1,42 @@
 export default function Home() {
   const galleryAssets = [
     {
-      
+      type: "image",
       src: "/Hassan image.JPG",
       title: "Hassan Ahmed",
     },
     {
-     
+     type: "image",
       src: "/honorata image.jpeg",
       title: "Honorate Umwamikazi",
       
     },
     {
-      
+      type: "image",
       src: "/carla image.jpeg",
       title: "Inyange Carla",
       
     },
     {
-     
+     type: "image",
       src: "/Bruno image.jpeg",
       title: "Hirwa Bruno",
       
     },
     {
-      
+      type: "image",
       src: "/hania image.jpeg",
       title: "Hanai Gahitsi",
       
     },
     {
-      
+      type: "image",
       src: "/Germain image.jpeg",
       title: "Germain Iradukunda",
       
     },
     {
-      
+      type: "video",
       src: "https://videos.pexels.com/video-files/854192/854192-sd_640_360_25fps.mp4",
       poster: "/group picture.jpeg",
       title: "Snapshots of our E-Lab journey",
