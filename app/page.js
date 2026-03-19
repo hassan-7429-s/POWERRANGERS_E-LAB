@@ -3,45 +3,39 @@ export default function Home() {
     {
       type: "image",
       src: "/gallery1.jpeg",
-      title: "gallery1",
+      title: "One",
     },
     {
      type: "image",
       src: "/gallery2.jpeg",
-      title: "gallery2",
+      title: "Two",
       
     },
     {
       type: "image",
       src: "/gallery3.jpeg",
-      title: "gallery3",
+      title: "Three",
       
     },
     {
      type: "image",
       src: "/gallery4.jpeg",
-      title: "gallery4",
+      title: "Four",
       
     },
     {
       type: "image",
       src: "/gallery5.jpeg",
-      title: "gallery5",
+      title: "Five",
       
     },
     {
       type: "image",
-      src: "/Germain image.jpeg",
-      title: "Germain Iradukunda",
+      src: "Du hope Interview.jpeg",
+      title: "Six",
       
     },
-    {
-      type: "video",
-      src: "https://videos.pexels.com/video-files/854192/854192-sd_640_360_25fps.mp4",
-      poster: "/group picture.jpeg",
-      title: "Snapshots of our E-Lab journey",
-      
-    }
+    
   ];
 
   return (
