@@ -1,4 +1,50 @@
 export default function Home() {
+  const galleryAssets = [
+    {
+      type: "image",
+      src: "/Hassan image.JPG",
+      title: "Hassan Ahmed",
+      caption: "Platform architect driving the Du Hope storefront build"
+    },
+    {
+      type: "image",
+      src: "/honorata image.jpeg",
+      title: "Honorate Umwamikazi",
+      caption: "Video storyteller documenting skills training"
+    },
+    {
+      type: "image",
+      src: "/carla image.jpeg",
+      title: "Inyange Carla",
+      caption: "Team support championing community resources"
+    },
+    {
+      type: "image",
+      src: "/Bruno image.jpeg",
+      title: "Hirwa Bruno",
+      caption: "Business coach aligning hospitality modules"
+    },
+    {
+      type: "image",
+      src: "/hania image.jpeg",
+      title: "Hanai Gahitsi",
+      caption: "Team speaker and ambassador for Du Hope partners"
+    },
+    {
+      type: "image",
+      src: "/Germain image.jpeg",
+      title: "Germain Iradukunda",
+      caption: "Operations lead ensuring long-term impact"
+    },
+    {
+      type: "video",
+      src: "https://videos.pexels.com/video-files/854192/854192-sd_640_360_25fps.mp4",
+      poster: "/group picture.jpeg",
+      title: "Hospitality training spotlight",
+      caption: "Video placeholder for the skills and certifications modules"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -39,9 +85,12 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white drop-shadow-lg">
             Empowering Vulnerable Women in Rwanda
           </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-md">
-              Transforming lives through creative skills training and entrepreneurship support for vulnerable women, including sex workers and teen moms, building sustainable futures in Rwanda’s growing creative economy.
-            </p>
+          <p className="text-xl md:text-2xl mb-6 text-white drop-shadow-md">
+            We are building an ecommerce platform for Du Hope to help women transitioning out of sex work sell handmade products locally and internationally, while also offering hospitality training and certifications.
+          </p>
+          <p className="text-lg md:text-xl mb-8 text-white/90 drop-shadow-sm">
+            By combining digital tools with hands-on skills development, we empower them to achieve economic independence and unlock long-term career opportunities.
+          </p>
           <a href="#about" className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-full text-lg shadow-lg transition">Learn More</a>
         </div>
         {/* Wave divider */}
@@ -122,12 +171,12 @@ export default function Home() {
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <h3 className="text-2xl font-bold mb-6 text-green-600">Our Solution</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                We are reducing unemployment for sex workers in Rwanda by creating an e-commerce website for Du Hope—a program that provides training and helps sex workers learn basic work skills like sewing, knitting, etc.—to sell their products online and connect their products with wider communities locally and internationally.
+                We are building an ecommerce platform for Du Hope that helps women transitioning out of sex work sell handmade products locally and internationally while also offering hospitality training and certifications. 
               </p>
               <h4 className="text-xl font-semibold mb-4 text-gray-800">How it works:</h4>
-              <p className="text-gray-700 mb-6">
-                The website will work as an online marketplace in addition to the local market that they already sell their products to. On this e-commerce website, they will display and sell their products both locally and internationally. Women involved in this program will receive training in online product designing, packaging, and order management systems. Their customers will go on their website and browse through available products, place orders, and make online payments, then receive their delivery. Du Hope will connect with delivery agencies to deliver these products.
-              </p>
+                <p className="text-gray-700 mb-6">
+                  The site combines a responsive storefront with hospitality learning modules, certification tracking, and digital tools so the women can serve global customers with confidence while monitoring the credentials they earn through the program.
+                </p>
               <h4 className="text-xl font-semibold mb-4 text-gray-800">Top features:</h4>
               <div className="space-y-2 mb-6">
                 <div className="flex items-center">
@@ -399,24 +448,43 @@ export default function Home() {
           <div className="space-y-3 text-center">
             <h2 className="text-4xl font-extrabold text-gray-900">Gallery</h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-700">
-              Placeholder cards for the photos and videos that will highlight the PowerRanger E-Lab journey. Replace these tiles with real assets whenever you are ready.
+              Authentic snapshots of the PowerRanger E-Lab team and the Du Hope solution. These cards showcase the faces behind the e-commerce prototype and leave room for future videos describing hospitality and certification stories.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {Array.from({ length: 6 }).map((_, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {galleryAssets.map((asset) => (
               <div
-                key={index}
-                className="flex flex-col gap-3 rounded-3xl border border-dashed border-gray-300 bg-white/60 p-6 text-center shadow-xl transition hover:-translate-y-1"
+                key={asset.title}
+                className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
               >
-                <div className="h-44 w-full rounded-2xl bg-gradient-to-br from-yellow-200 to-yellow-400/80 animate-pulse" />
-                <p className="text-xs font-semibold uppercase tracking-[0.5em] text-gray-500">Placeholder</p>
-                <p className="text-lg font-semibold text-gray-900">Media coming soon</p>
-                <p className="text-sm text-gray-500">Swap this card with an image or video tile.</p>
+                <div className="relative h-64 w-full">
+                  {asset.type === "image" ? (
+                    <img
+                      src={asset.src}
+                      alt={asset.title}
+                      className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <video
+                      src={asset.src}
+                      poster={asset.poster}
+                      controls
+                      className="h-full w-full object-cover"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition group-hover:opacity-100" />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-gray-900">{asset.title}</h3>
+                  <p className="text-sm text-gray-600">{asset.caption}</p>
+                  <span className="mt-3 inline-flex rounded-full border border-yellow-300 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-yellow-600">
+                    {asset.type === "video" ? "Video" : "Image"}
+                  </span>
+                </div>
               </div>
             ))}
-          </div>
-            <div className="text-center text-sm text-gray-500">
-            Update this grid with actual &lt;img&gt;/&lt;video&gt; elements once the assets are available.
           </div>
         </div>
       </section>
