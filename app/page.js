@@ -31,13 +31,7 @@ export default function Home() {
     },
       
     },
-    {
-      type: "video",
-      src: "https://videos.pexels.com/video-files/854192/854192-sd_640_360_25fps.mp4",
-      poster: "/group picture.jpeg",
-      title: "Snapshots of our E-Lab journey",
-      
-    }
+   
   ];
 
   return (
