@@ -1,5 +1,3 @@
-import GallerySection from "./components/GallerySection";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -393,7 +391,7 @@ export default function Home() {
         </div>
       </section>
 
-      <GallerySection />
+
 
       {/* Contact Section - Social Enhanced */}
       <section id="contact" className="section bg-gradient-to-r from-gray-900 to-black text-white">

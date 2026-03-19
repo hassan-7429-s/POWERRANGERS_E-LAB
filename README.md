@@ -69,20 +69,3 @@ This project is part of the PowerRanger E-Lab initiative. For contributions or c
 ## License
 
 © 2026 PowerRanger E-Lab. All rights reserved.
-
-## MongoDB & Deployment
-
-- `MONGODB_URI`: connection string for your Atlas/cluster instance (set this in `.env.local` for local development and in the Vercel dashboard for production). The gallery will gracefully fall back to the built-in dataset when this variable is missing so previews stay reliable.
-- `MONGODB_DB` (optional): overrides the database encoded in the URI if you prefer to keep data inside a different namespace.
-
-### How the integration works
-
-- `lib/mongodb.js` keeps a cached `MongoClient` alive across requests so server components and API routes reuse the same connection.
-- `lib/gallery.js` exposes `getGalleryItems()` (used by the homepage) and `addGalleryItem()` (available through `app/api/gallery/route.js`) so you can seed or expand the `gallery` collection over time.
-
-### Deploying on Vercel
-
-1. Push to the branch connected with your Vercel project.
-2. Under **Project Settings > Environment Variables**, add `MONGODB_URI` (and `MONGODB_DB` if needed) for the `preview`/`production` environments you plan to publish.
-3. Trigger a redeploy after the variables are set so the build can connect to MongoDB.
-4. (Optional) Seed the collection by POSTing JSON to `/api/gallery` from Postman, Curl, or a Vercel Function to register additional media items.
