@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PowerRanger E-Lab
+
+A Next.js web application for PowerRanger E-Lab, an initiative empowering vulnerable women in Rwanda through creative skills training and entrepreneurship support.
+
+## About the Project
+
+PowerRanger E-Lab is dedicated to transforming the lives of vulnerable women in Rwanda, including sex workers and teen moms, by providing comprehensive training and creating sustainable income opportunities. Our flagship solution is an e-commerce website for Du Hope—a program that helps women transition out of sex work through skills training in sewing, knitting, and crafts. The platform connects their handmade products with local and international markets, combining technology with social impact to create long-term economic independence.
+
+### Key Features
+
+- **Mission & Vision**: Clear articulation of our goals and values
+- **Problem & Solution**: Detailed analysis of unemployment challenges for vulnerable women and our e-commerce solution
+- **E-LAB Challenges**: Documentation of the six key challenges in implementing digital entrepreneurship for Du Hope
+- **Team Profiles**: Meet our dedicated team members
+- **Project Showcase**: Featured projects and initiatives
+- **Gallery**: Multimedia showcase of our work and community
+- **Contact Information**: Ways to connect and collaborate
+
+## Technology Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel (recommended)
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/
+│   ├── globals.css          # Global styles and Tailwind imports
+│   ├── layout.js           # Root layout component
+│   └── page.js             # Main homepage component
+├── public/                 # Static assets (images, videos, etc.)
+│   ├── logo.svg
+│   └── [team images]
+└── package.json
+```
 
-## Learn More
+## Sections
 
-To learn more about Next.js, take a look at the following resources:
+1. **Hero**: Engaging introduction with background video
+2. **About**: Mission statement and core values
+3. **Problem & Solution**: Detailed problem analysis and our comprehensive solution
+4. **E-LAB Challenges**: Six key challenges with solutions
+5. **Team**: Meet our team members
+6. **Projects**: Featured initiatives and videos
+7. **Gallery**: Multimedia showcase
+8. **Contact**: Connect with us
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is part of the PowerRanger E-Lab initiative. For contributions or collaborations, please reach out through our contact information on the website.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+© 2026 PowerRanger E-Lab. All rights reserved.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## MongoDB & Deployment
+
+- `MONGODB_URI`: connection string for your Atlas/cluster instance (set this in `.env.local` for local development and in the Vercel dashboard for production). The gallery will gracefully fall back to the built-in dataset when this variable is missing so previews stay reliable.
+- `MONGODB_DB` (optional): overrides the database encoded in the URI if you prefer to keep data inside a different namespace.
+
+### How the integration works
+
+- `lib/mongodb.js` keeps a cached `MongoClient` alive across requests so server components and API routes reuse the same connection.
+- `lib/gallery.js` exposes `getGalleryItems()` (used by the homepage) and `addGalleryItem()` (available through `app/api/gallery/route.js`) so you can seed or expand the `gallery` collection over time.
+
+### Deploying on Vercel
+
+1. Push to the branch connected with your Vercel project.
+2. Under **Project Settings > Environment Variables**, add `MONGODB_URI` (and `MONGODB_DB` if needed) for the `preview`/`production` environments you plan to publish.
+3. Trigger a redeploy after the variables are set so the build can connect to MongoDB.
+4. (Optional) Seed the collection by POSTing JSON to `/api/gallery` from Postman, Curl, or a Vercel Function to register additional media items.
